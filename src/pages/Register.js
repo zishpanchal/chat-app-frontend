@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
@@ -18,6 +18,7 @@ export default function Register() {
     if(localStorage.getItem('chat-app-user')){
       navigate('/')
     }
+    // eslint-disable-next-line
   }, []);
 
   const handleSubmit = async (event)=>{

@@ -11,6 +11,7 @@ export default function SetAvatar() {
         if(!localStorage.getItem('chat-app-user')){
             navigate('/login')
           }
+          // eslint-disable-next-line
     }, [])
 
     const apiKey = process.env.REACT_APP_MA_API_KEY;
@@ -55,6 +56,7 @@ export default function SetAvatar() {
         setAvatars(data);
         setIsLoading(false);
         })();
+        // eslint-disable-next-line
     }, [])
 
     return (

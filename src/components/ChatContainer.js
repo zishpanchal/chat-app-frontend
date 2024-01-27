@@ -1,5 +1,4 @@
 import React,{useState, useEffect, useRef} from 'react'
-import Logout from './Logout'
 import ChatInput from './ChatInput'
 import Messages from './Messages'
 import axios from 'axios'
@@ -19,6 +18,7 @@ export default function ChatContainer({currentChat,currentUser, socket}) {
             setMessages(response.data);
         }
     })()
+    // eslint-disable-next-line
 },[currentChat]);
     
     const handleSendMsg = async(msg)=>{
@@ -42,6 +42,7 @@ export default function ChatContainer({currentChat,currentUser, socket}) {
                 setArrivalMsg({fromSelf:false, message: msg})
             })
         }
+        // eslint-disable-next-line
     },[]);
 
     useEffect(()=>{
